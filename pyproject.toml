@@ -1,0 +1,37 @@
+[project]
+name = "rcs"
+version = "0.1.0"
+description = "Generate Roster Cheat Sheets"
+authors = [
+    { name = "Bruce Oberg", email = "bruce@oberg.org" }
+]
+requires-python = ">=3.13"
+dependencies = [
+    "bolay",
+    "arabic-reshaper>=3.0.0",
+    "fpdf2>=2.8.1",
+    "python-bidi>=0.6.3",
+    "python-dateutil>=2.9.0.post0",
+    "python-docx>=1.2.0",
+    "unicategories>=0.1.2",
+    "bs4>=0.0.2",
+]
+
+[project.scripts]
+rcs = "rcs.main:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/rcs"]
+
+[tool.uv.workspace]
+members = [
+    "bolay",
+    "rcs",
+]
+
+[tool.uv.sources]
+bolay = { workspace = true }
