@@ -15,6 +15,7 @@ dependencies = [
     "python-docx>=1.2.0",
     "unicategories>=0.1.2",
     "bs4>=0.0.2",
+    "requests>=2.34.2",
 ]
 
 [project.scripts]
