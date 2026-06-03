@@ -17,6 +17,7 @@ dependencies = [
     "bs4>=0.0.2",
     "requests>=2.34.2",
     "cairosvg>=2.7.0",
+    "pyyaml>=6.0.3",
 ]
 
 [project.scripts]
@@ -37,3 +38,8 @@ members = [
 
 [tool.uv.sources]
 bolay = { workspace = true }
+
+[dependency-groups]
+dev = [
+    "types-pyyaml>=6.0.12.20260518",
+]
