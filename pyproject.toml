@@ -20,6 +20,7 @@ dependencies = [
     "pyyaml>=6.0.3",
     "pydantic>=2.13.4",
     "tqdm>=4.68.1",
+    "qrcode>=8.2",
 ]
 
 [project.scripts]
